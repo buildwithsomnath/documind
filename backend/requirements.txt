@@ -1,0 +1,12 @@
+
+Flask
+Flask-Cors
+python-dotenv
+psycopg[binary]
+pgvector
+SQLAlchemy
+Flask-SQLAlchemy
+PyMuPDF
+python-docx
+sentence-transformers
+pytest
