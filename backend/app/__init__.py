@@ -7,6 +7,7 @@ from flask_cors import CORS
 from app.config import Config
 from app.db import init_db
 from app.routes.documents import documents_bp
+from app.routes.search import search_bp
 
 logger = logging.getLogger(__name__)
 
@@ -24,6 +25,7 @@ def create_app(config_class=Config) -> Flask:
 
     # Register blueprints
     app.register_blueprint(documents_bp)
+    app.register_blueprint(search_bp)
 
     @app.get("/api/health")
     def health():

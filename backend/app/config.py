@@ -36,3 +36,10 @@ class Config:
         "sentence-transformers/all-MiniLM-L6-v2"
     )
     EMBEDDING_DIM = 384
+
+    # Reranking and Hybrid Search configurations
+    RERANKER_MODEL_NAME = os.getenv(
+        "RERANKER_MODEL_NAME",
+        "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    )
+    RRF_K = int(os.getenv("RRF_K", "60"))

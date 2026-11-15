@@ -57,4 +57,13 @@ def init_db():
 
     logger.info("Creating database tables if not present...")
     Base.metadata.create_all(bind=engine)
+
+    with engine.connect() as conn:
+        logger.info("Ensuring GIN full-text search index on document_chunks...")
+        conn.execute(text(
+            "CREATE INDEX IF NOT EXISTS ix_document_chunks_content_fts "
+            "ON document_chunks USING gin (to_tsvector('english', content));"
+        ))
+        conn.commit()
+
     logger.info("Database schema initialized successfully.")

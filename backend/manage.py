@@ -28,8 +28,8 @@ def main():
 
     elif command == "test":
         import pytest
-        print("Running ingestion test suite...")
-        sys.exit(pytest.main(["tests/test_ingestion.py", "-v"]))
+        print("Running DocuMind test suite...")
+        sys.exit(pytest.main(["tests", "-v"]))
 
     else:
         print(f"Unknown command: '{command}'")
