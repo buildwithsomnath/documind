@@ -1,11 +1,10 @@
 
-Flask
+Flask>=3.0
 Flask-Cors
 python-dotenv
 psycopg[binary]
 pgvector
-SQLAlchemy
-Flask-SQLAlchemy
+SQLAlchemy>=2.0
 PyMuPDF
 python-docx
 sentence-transformers
