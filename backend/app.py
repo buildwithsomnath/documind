@@ -1,10 +1,13 @@
 import sys
 from pathlib import Path
 
-# Ensure backend root is on sys.path
+# Ensure backend and documind root are on sys.path
 backend_dir = Path(__file__).resolve().parent
 if str(backend_dir) not in sys.path:
     sys.path.insert(0, str(backend_dir))
+documind_root = backend_dir.parent
+if str(documind_root) not in sys.path:
+    sys.path.insert(0, str(documind_root))
 
 from app import app, init_db
 

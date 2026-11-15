@@ -1,0 +1,38 @@
+[
+  {
+    "id": "q1_vector_indexing",
+    "query": "How are vector embeddings stored and indexed in PostgreSQL in DocuMind?",
+    "expected_document": "sample_architecture.pdf",
+    "expected_page": 2,
+    "target_keywords": ["pgvector", "HNSW", "384-dimensional", "cosine distance"],
+    "is_answerable": true,
+    "description": "Tests semantic vector search and exact term indexing retrieval."
+  },
+  {
+    "id": "q2_chunking_spec",
+    "query": "What is the chunk size and token limit for all-MiniLM-L6-v2?",
+    "expected_document": "sample_spec.docx",
+    "expected_page": 1,
+    "target_keywords": ["500 characters", "100-character", "256-token", "all-MiniLM-L6-v2"],
+    "is_answerable": true,
+    "description": "Tests exact specification retrieval from Word document."
+  },
+  {
+    "id": "q3_architecture_layers",
+    "query": "What are the key architectural layers of the DocuMind platform?",
+    "expected_document": "sample_architecture.pdf",
+    "expected_page": 1,
+    "target_keywords": ["ingestion pipeline", "pgvector", "hybrid", "reranking"],
+    "is_answerable": true,
+    "description": "Tests multi-concept overview retrieval."
+  },
+  {
+    "id": "q4_negative_hallucination",
+    "query": "What is the capital city of Australia and what is its population?",
+    "expected_document": null,
+    "expected_page": null,
+    "target_keywords": [],
+    "is_answerable": false,
+    "description": "Tests anti-hallucination guardrail; must return fallback message."
+  }
+]

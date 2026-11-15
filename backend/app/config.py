@@ -43,3 +43,10 @@ class Config:
         "cross-encoder/ms-marco-MiniLM-L-6-v2"
     )
     RRF_K = int(os.getenv("RRF_K", "60"))
+
+    # Google Gemini LLM configurations
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
+    LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", "0.2"))  # Low temperature for factual precision
+    LLM_MAX_OUTPUT_TOKENS = int(os.getenv("LLM_MAX_OUTPUT_TOKENS", "1024"))
+    LLM_REQUEST_TIMEOUT = int(os.getenv("LLM_REQUEST_TIMEOUT", "60"))
